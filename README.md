@@ -1,0 +1,2 @@
+# NuxtDemo
+Nuxt for training
