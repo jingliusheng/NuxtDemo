@@ -4,7 +4,13 @@
       About Us Index Page
     </h2>
     <ul>
-      <li><a href="/">Go To Home</a></li>
+      <li><nuxt-link to="/">返回首页</nuxt-link></li>
     </ul>
   </div>
 </template>
+
+<script>
+export default {
+  transition: "test"
+};
+</script>

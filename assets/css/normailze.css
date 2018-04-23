@@ -1,3 +1,31 @@
 html {
   color: red
 }
+
+
+/* 全局动画 */
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 2s
+}
+
+.page-enter,
+.page-leave {
+  opacity: 0
+}
+
+
+/* 特定动画  test 在特定页面script中使用transition：‘test’即可 参见about.vue*/
+
+.test-enter-active,
+.test-leave-active {
+  transition: all 1s;
+  font-size: 14px;
+}
+
+.test-enter,
+.test-leave {
+  opacity: 0;
+  font-size: 40px;
+}

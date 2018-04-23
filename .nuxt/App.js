@@ -1,19 +1,21 @@
 import Vue from 'vue'
-import NuxtLoading from './components/nuxt-loading.vue'
+
+
+import '..\\assets\\css\\normailze.css'
 
 
 let layouts = {
 
-  "_default": () => import('./layouts/default.vue'  /* webpackChunkName: "layouts_default" */).then(m => m.default || m)
+  "_default": () => import('..\\layouts\\default.vue'  /* webpackChunkName: "layouts_default" */).then(m => m.default || m)
 
 }
 
 let resolvedLayouts = {}
 
 export default {
-  head: {"meta":[],"link":[],"style":[],"script":[]},
+  head: {"title":"nuxtdemo","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
   render(h, props) {
-    const loadingEl = h('nuxt-loading', { ref: 'loading' })
+    
     const layoutEl = h(this.layout || 'nuxt')
     const templateEl = h('div', {
       domProps: {
@@ -34,7 +36,7 @@ export default {
         id: '__nuxt'
       }
     }, [
-      loadingEl,
+      
       transitionEl
     ])
   },
@@ -56,21 +58,7 @@ export default {
     this.error = this.nuxt.error
   },
   
-  mounted () {
-    this.$loading = this.$refs.loading
-  },
-  watch: {
-    'nuxt.err': 'errorChanged'
-  },
-  
   methods: {
-    
-    errorChanged () {
-      if (this.nuxt.err && this.$loading) {
-        if (this.$loading.fail) this.$loading.fail()
-        if (this.$loading.finish) this.$loading.finish()
-      }
-    },
     
     setLayout (layout) {
       if (!layout || !resolvedLayouts['_' + layout]) layout = 'default'
@@ -99,7 +87,7 @@ export default {
     }
   },
   components: {
-    NuxtLoading
+    
   }
 }
 

@@ -3,13 +3,13 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _03e7e774 = () => import('..\\pages\\user.vue' /* webpackChunkName: "pages_user" */).then(m => m.default || m)
-const _54730d7c = () => import('..\\pages\\user\\index.vue' /* webpackChunkName: "pages_user_index" */).then(m => m.default || m)
-const _731e3ee4 = () => import('..\\pages\\user\\_id.vue' /* webpackChunkName: "pages_user__id" */).then(m => m.default || m)
-const _6a2c51a0 = () => import('..\\pages\\about\\index.vue' /* webpackChunkName: "pages_about_index" */).then(m => m.default || m)
-const _523a3974 = () => import('..\\pages\\news\\index.vue' /* webpackChunkName: "pages_news_index" */).then(m => m.default || m)
-const _239fee48 = () => import('..\\pages\\news\\_id.vue' /* webpackChunkName: "pages_news__id" */).then(m => m.default || m)
-const _fc917932 = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
+const _767a3818 = () => import('..\\pages\\user.vue' /* webpackChunkName: "pages_user" */).then(m => m.default || m)
+const _6cb8d60e = () => import('..\\pages\\user\\index.vue' /* webpackChunkName: "pages_user_index" */).then(m => m.default || m)
+const _790103f6 = () => import('..\\pages\\user\\_id.vue' /* webpackChunkName: "pages_user__id" */).then(m => m.default || m)
+const _5a9f9b4e = () => import('..\\pages\\about\\index.vue' /* webpackChunkName: "pages_about_index" */).then(m => m.default || m)
+const _6a800206 = () => import('..\\pages\\news\\index.vue' /* webpackChunkName: "pages_news_index" */).then(m => m.default || m)
+const _17da6424 = () => import('..\\pages\\news\\_id.vue' /* webpackChunkName: "pages_news__id" */).then(m => m.default || m)
+const _dc493d0e = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
 
 
 
@@ -71,38 +71,38 @@ export function createRouter () {
     routes: [
 		{
 			path: "/user",
-			component: _03e7e774,
+			component: _767a3818,
 			children: [
 				{
 					path: "",
-					component: _54730d7c,
+					component: _6cb8d60e,
 					name: "user"
 				},
 				{
 					path: ":id",
-					component: _731e3ee4,
+					component: _790103f6,
 					name: "user-id"
 				}
 			]
 		},
 		{
 			path: "/about",
-			component: _6a2c51a0,
+			component: _5a9f9b4e,
 			name: "about"
 		},
 		{
 			path: "/news",
-			component: _523a3974,
+			component: _6a800206,
 			name: "news"
 		},
 		{
 			path: "/news/:id",
-			component: _239fee48,
+			component: _17da6424,
 			name: "news-id"
 		},
 		{
 			path: "/",
-			component: _fc917932,
+			component: _dc493d0e,
 			name: "index"
 		}
     ],
